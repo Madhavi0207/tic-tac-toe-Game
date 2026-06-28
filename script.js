@@ -8,9 +8,12 @@ const turnInfo = document.querySelector("#turnInfo");
 gameBoard.addEventListener("click", (event) => {
   const cell = event.target;
 
+  // Ensure the cell is empty before marking it
   if (cell.textContent === "") {
+    // Mark the cell with the current player's symbol
     cell.textContent = currentPlayer;
 
+    // Change turn info
     turnInfo.textContent =
       currentPlayer === "X" ? "Player 2's Turn" : "Player 1's Turn";
 
